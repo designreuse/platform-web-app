@@ -1,0 +1,21 @@
+/* Input element having an invalid value */
+select.error,
+input.error {
+    border-color: #b94a48;
+    background-image: url('valid_error.png');
+    background-position:  right 5px center;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}
+
+/* Input element having a valid value */
+select.success,
+input.success {
+    border-color: #468847;
+    background-image: url('valid_success.png');
+    background-position: right 5px center;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}

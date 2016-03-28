@@ -1,0 +1,39 @@
+.panel-header{
+  .panel-title{color: #dddddd;background: none;}
+}
+.panel-body{
+  td{border: none;}
+  .datagrid-view1{
+    .datagrid-header-row{background: #31bc86;}
+    .datagrid-td-rownumber{background: #2ea879;}
+    .datagrid-cell-rownumber{color: #ffffff;}
+    .datagrid-body{margin-top: -1px !important;}
+  }
+  .datagrid-view2{
+    td{padding: 0.75em 1.5em;}
+    .datagrid-header-inner{
+      background-color: #31bc86;
+      table.datagrid-htable{
+        tr.datagrid-header-row td{
+          span{
+            color: #ffffff;
+          }
+        }
+        td.datagrid-header-over{background: #31bc86;}
+      }
+    }
+    table.datagrid-btable{
+      width: 100%;
+    }
+    table.datagrid-btable{
+      tr:nth-child(2n-1){
+        background-color: #f5f5f5;
+        transition: all .125s ease-in-out;
+      }
+      tr:hover{
+        background-color: rgba(129,208,177,.3);
+      }
+    }
+  }
+
+}

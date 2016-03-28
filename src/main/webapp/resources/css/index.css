@@ -1,0 +1,59 @@
+﻿body, div, p, h1, h2, h3, h4, h5, h6, hr, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {margin:0; padding:0; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box;}
+body, button, input, select, textarea {font:normal 12px/1  microsoft yahei, "\5b8b\4f53", Tahoma, Helvetica, Arial, sans-serif; line-height:22px }
+.showdialog { padding:25px 30px; background: #fff; position: fixed; _position:absolute; z-index: 3000; width: 600px; left: 50%; top: 40%; margin-left:-330px; margin-top: -170px; -webkit-box-shadow: 0 0 10px #434343; -moz-box-shadow: 0 0 10px #434343; box-shadow: 0 0 10px #434343; }
+.showdialog .i-sign { margin: 4px 10px 10px 0; float:left; }
+.showdialog div.pr,.manage-table div.pr { display: inline-block; zoom:1; *display:inline; }
+.showdialog { background: #fafafa; }
+.showdialog #uploadifyPhote-queue {display:none!important;}
+
+.uc-uinfoverify, .uc-delcar { width: 450px; margin-left: -220px; top: 50%; margin-top: -188px }
+.uc-uinfoverify .sd-bd p.fmnoti { color: #f60; padding:10px 0 20px }
+.uc-uinfoverify .sd-bd p.pt0 { padding-top: 0 }
+.sd-hd { position: relative; height: 22px; }
+.sd-hd .close { width: 18px; height: 18px; background: #545a9e url(../images/ico-sprite.png) -211px -1px; text-indent: -9999px; overflow: hidden; position: absolute; z-index:1010; right: -35px; top: -30px; border: solid 3px #fff; -webkit-box-shadow: 1px 1px 3px #999; -moz-box-shadow: 1px 1px 3px #999; box-shadow: 1px 1px 3px #999; }
+.sd-hd .close:hover { background-color: #d3d6db; }
+.sd-hd { padding-bottom: 12px; margin-bottom:10px; border-bottom: solid 1px #e8e8e8 }
+
+h3.bdtit { font-size: 12px; color: #777 }
+h2.sdtit { color:#545a9e; font-weight: normal; float: left; display: inline }
+h2.sdtit { font-weight: bold; }
+
+.btn-a-white.w117 ,.btn-a-white a.w117 ,.w117{width: 117px;}
+.btn-a-white a.w117 ,.w117{width: 117px;}
+.btn-a-blue, .btn-a-white,.btn-a-grey, .btn-b-blue, .btn-b-white {display: inline-block; zoom:1; width: 88px; height: 22px; line-height: 22px; text-align: center;}
+.btn-a-blue a:hover,.btn-a-white a:hover,.btn-a-grey a:hover,.btn-a-white .btn-a-blue a:hover,.btn-b-blue:hover, .btn-b-white:hover {text-decoration: none; color: #fff; background: #ff8a00;  }
+.btn-a-white a,.btn-b-white, .uc-pages span.ucp-pre, .uc-pages span.ucp-next {color:#545a9e; border:solid 1px #545a9e; line-height: 24px; width: 86px;  background: #ffffff;  }
+.sd-bd p.fmbtm { text-align:right; height: 28px; line-height: 28px }
+.sd-bd p.fmbtm a { color:#545a9e; }
+.sd-bd p.fmbtm a:hover { text-decoration: none }
+.sd-bd p.fmbtm .cancel a:hover { color: #024b97; text-decoration: none }
+.sd-bd p.fmbtm .confirm { margin-left: 8px }
+.sd-bd p.fmbtm .confirm a { color:#fff; }
+.sd-bd p.fmbtm input { margin-left: 10px }
+.fmbtm { border-top: solid 1px #fff; padding-top: 22px; line-height: 42px; color:#8c8f93; }
+#cancel_error { left:0; top:21px; }
+.sd-bd p.fmbtm .btn-a-white a { color: #545a9e }
+.sd-bd p.fmbtm .btn-a-white a:hover { color: #fff }
+.showdialog .btn-a-white , .showdialog .btn-a-blue ,.showdialog .btn-a-white a, .showdialog .btn-a-blue a { height:26px; line-height:26px; }
+.btn-a-blue, .btn-a-white,.btn-a-grey, .btn-b-blue, .btn-b-white {display: inline-block; zoom:1; width: 88px; height: 22px; line-height: 22px; text-align: center;}
+.btn-a-blue a, .btn-a-white a,.btn-a-grey a,.btn-a-white .btn-a-blue a,.btn-b-blue, .btn-b-white {display:block; height: 22px; line-height: 22px; color:#fff; background: #545a9e; border:solid 1px #545a9e; }
+.btn-a-blue a:hover,.btn-a-white a:hover,.btn-a-grey a:hover,.btn-a-white .btn-a-blue a:hover,.btn-b-blue:hover, .btn-b-white:hover {text-decoration: none; color: #fff; background: #545a9e;  }
+.showdialog .btn-a-white , .showdialog .btn-a-blue ,.showdialog .btn-a-white a, .showdialog .btn-a-blue a { height:26px; line-height:26px; }
+.btn-a-blue a { height:26px; line-height:26px; }
+.confirm { margin-left: 8px }
+.confirm a { color:#fff; }
+.btn-a-white.w117 ,.btn-a-white a.w117 ,.w117{width: 117px;}
+
+.btn-a-blue, .btn-a-white,.btn-a-grey, .btn-b-blue, .btn-b-white {display: inline-block; zoom:1; width: 88px; height: 22px; line-height: 22px; text-align: center;}
+.btn-a-white a,.btn-b-white, .uc-pages span.ucp-pre, .uc-pages span.ucp-next {color:#545a9e; border:solid 1px #545a9e; line-height: 24px; width: 86px;  background: #ffffff;  }
+
+.rdo,.fuxuan {
+    line-height:50px;
+}
+
+.title {
+    height:100px;
+    line-height:100px;
+    background:#4e90bf;
+    font-size:36px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>uploadCrop</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="cropper.min.css">
+  <style>
+    .imgCropBox .imgCropBtn {
+      cursor: pointer;
+      border: 1px solid #dddddd;
+    }
+
+    .webuploader-container input {
+      opacity: 0;
+      filter: Alpha(opacity=0);
+      font-size: 0;
+      cursor: pointer;
+    }
+    .mar_b--10{
+      margin-bottom: 10px;
+    }
+    .img-preview{
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+<div class="imgCropBox" id="imgCropBox">
+  <img src="./btn-upload.jpg" alt="" class="imgCropBtn" id="imgCropBtn">
+  <input type="text" class="hide imgCropInput"/>
+</div>
+<!--imgCropModal-->
+<div class="modal fade imgCropModal" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+          aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">图片裁剪</h4>
+      </div>
+      <div class="modal-body" id="uploader">
+        <div class="row img-modal">
+          <div class="col-md-12 mar_b--10">
+            <button class="btn btn-primary" id="imgUploadBtn">上传图片</button>
+          </div>
+          <div class="col-md-8 img-box">
+          </div>
+          <div class="col-md-4 ">
+            <h3 class="page-header img-preview-header hide">Preview</h3>
+            <div class="img-preview"></div>
+            <div class="progress progress-striped active" style="display:none;">
+              <div id="progressBar" class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+        <button type="button" class="btn btn-primary" id="imgUploadFile">上传</button>
+        <button type="button" class="btn btn-primary" id="imgUploadRetry">重试</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/bootstrap.min.js"></script>
+<script src="webuploader.min.js"></script>
+<script src="../dist/cropper.min.js"></script>
+<script src="imgCropBtn.js"></script>
+<script>
+  cropUpload();
+</script>
+</body>
+</html>

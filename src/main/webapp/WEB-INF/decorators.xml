@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/common/global/">
+    <excludes>
+        <pattern>/resources/common/*</pattern>
+        <pattern>/api/*</pattern>
+        <pattern>/login*</pattern>
+        <pattern>/login/**</pattern>
+        <pattern>/ajaxLoginSuccess</pattern>
+        <pattern>/error/*</pattern>
+        <pattern>/dropdown/*</pattern>
+        <pattern>/file/*</pattern>
+    </excludes>
+   <!--<decorator name="operation" page="operation.jsp">-->
+         <!--<pattern>/**</pattern>         -->
+    <!--</decorator>-->
+    <!---->
+     <!--<decorator name="opr_detail" page="opr_detail.jsp">-->
+         <!--<pattern>/**/detail</pattern>         -->
+    <!--</decorator >-->
+    <decorator name="section" page="section.jsp">
+        <pattern>/**/*Section</pattern>
+        <pattern>/**/*Section/**</pattern>
+    </decorator>
+    <decorator name="default" page="default.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+    <decorator name="window" page="window.jsp">
+        <pattern>/**/*Window</pattern>
+        <pattern>/**/*Window/**</pattern>
+    </decorator>
+    <decorator name="monitor" page="monitor.jsp">
+        <pattern>/**/monitor/**</pattern>
+        <pattern>/monitor/**</pattern>
+    </decorator>
+</decorators>

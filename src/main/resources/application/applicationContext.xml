@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="false"
+       xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
+			http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+			http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
+    <!-- Annotation Initilization -->
+
+    <context:annotation-config/>
+
+    <import resource="classpath*:/core/application/applicationContext-base.xml" />
+
+    <!-- 扫描制定的包，注解 -->
+    <!--<context:component-scan base-package="com.aladdin.platform.*">-->
+        <!--<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+        <!--<context:exclude-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>-->
+    <!--</context:component-scan>-->
+
+    <!--<context:component-scan base-package="com.wl.resource.*"/>-->
+
+   <!--定时器任务-->
+    <context:component-scan base-package="com.aladdin.platform.listener" />
+    <bean id="rateJob" class="com.aladdin.platform.listener.ExchangeRateJob"></bean>
+    <task:scheduled-tasks>
+        <task:scheduled ref="rateJob" method="doJob" cron="${rate.second} ${rate.minute} ${rate.hour} * * ?"/>
+    </task:scheduled-tasks>
+    <bean id="sendJob" class="com.aladdin.platform.listener.SendMessageJob"></bean>
+    <task:scheduled-tasks>
+        <task:scheduled ref="sendJob" method="doJob" cron="${send.second} ${send.minute} ${send.hour} 1 * ?"/>
+    </task:scheduled-tasks>
+    <bean id="syncJob" class="com.aladdin.platform.listener.UserSyncImJob"/>
+    <task:scheduled-tasks>
+        <task:scheduled ref="syncJob" method="doJob" fixed-delay="${sync.time}"/>
+    </task:scheduled-tasks>
+
+
+    <bean id="generalDateConverter" class="com.aladdin.platform.common.GeneralDateConverter">
+        <property name="styleMap">
+            <map>
+                <entry key="YEAR_MONTH" value="yyyy-MM"/>
+                <entry key="SHORT_DATE" value="MM-dd"/>
+                <entry key="DATE" value="yyyy-MM-dd"/>
+                <entry key="DATE_HOUR" value="yyyy-MM-dd HH:mm"/>
+                <entry key="DAY_HOUR" value="MM-dd HH:mm"/>
+                <entry key="DATE_HOUR_SECOND" value="yyyy-MM-dd HH:mm:ss"/>
+                <entry key="HOUR" value="HH:mm"/>
+                <entry key="HOUR_SECOND" value="HH:mm:ss"/>
+                <entry key="BILL_DATE" value="yyyyMMdd"/>
+                <entry key="BPO_DATE" value="yyyyMMddHHmmss"/>
+                <entry key="BPO_DATE_CHINA" value="yyyy年MM月dd日"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean id="captchaProducer"
+          class="com.google.code.kaptcha.impl.DefaultKaptcha">
+        <property name="config">
+            <bean class="com.google.code.kaptcha.util.Config">
+                <constructor-arg type="java.util.Properties">
+                    <props>
+                        <prop key="kaptcha.image.width">150</prop>
+                        <prop key="kaptcha.image.height">50</prop>
+                        <prop key="kaptcha.textproducer.char.string">23456789ABCDEFGHJKLMNPQRSTUVWXYZ</prop>
+                        <prop key="kaptcha.textproducer.char.length">4</prop>
+                    </props>
+                </constructor-arg>
+            </bean>
+        </property>
+    </bean>
+
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="maxUploadSize" value="${uploader.maxUploadSize}"/>
+    </bean>
+
+
+    <beans profile="production">
+        <context:property-placeholder ignore-unresolvable="true" order="1"  location="classpath*:/properties/production/systemConfig.properties"/>
+        <util:properties id="sysConfig" location="classpath:/properties/production/systemConfig.properties"/>
+    </beans>
+
+    <beans profile="test">
+        <context:property-placeholder ignore-unresolvable="true" order="1" location="classpath:/properties/test/systemConfig.properties"/>
+        <util:properties id="sysConfig" location="classpath:/properties/test/systemConfig.properties"/>
+    </beans>
+
+    <beans profile="development">
+        <context:property-placeholder ignore-unresolvable="true" order="1" location="classpath:/properties/development/systemConfig.properties"/>
+        <util:properties id="sysConfig" location="classpath:/properties/development/systemConfig.properties"/>
+    </beans>
+
+    <beans profile="localhost">
+        <context:property-placeholder ignore-unresolvable="true" order="0" location="classpath:/properties/systemConfig.properties"/>
+        <util:properties id="sysConfig" location="classpath:/properties/systemConfig.properties"/>
+        <util:properties id="fileUpload" location="classpath:/properties/fileUpload.properties"/>
+    </beans>
+
+</beans>

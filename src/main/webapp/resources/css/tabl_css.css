@@ -1,0 +1,137 @@
+@charset "utf-8";
+#css {
+	text-decoration: none;
+}
+.tab1{
+	width: 100%;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+}
+.tabl_menu{
+	height: 42px;
+	font-size: 14px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-top-color: #CCC;
+	border-right-color: #ccc;
+}
+.tabl_menu li{
+	float: left;
+	width: 120px;
+	text-align: center;
+	line-height: 40px;
+	height: 40px;
+	cursor: auto;
+	color: #666;
+	overflow: hidden;
+	background-image: url(../images/bg.png);
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-bottom-color: #ccc;
+	border-left-color: #ccc;
+}
+#tab1 .tabl_menu ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+
+.tabl_menu li.off{background:#fff;color:#336699;font-weight:bold; border-bottom:none;}
+#content #tab1 .menudiv #con_one_1 #1 table tr td #u112_input {
+	height: 50px;
+}
+#test1 {
+	height: 100px;
+	margin-top: 15px;
+	width: 300px;
+}
+
+#test2 {
+	height: 100px;
+	margin-top: 15px;
+	width: 300px;
+}
+#bc01 {
+	height: 29px;
+	width: 52px;
+	background-image: url(../images/u113.png);
+	padding: 0px;
+	margin-top: 20px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 200px;
+}
+
+
+
+.tabl_menudiv{
+	background: #fefefe;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-top-color: #cccccc;
+	border-right-color: #cccccc;
+	border-left-color: #cccccc;
+	border-top-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #cccccc;
+
+}
+
+td {
+	margin-top: 11px;
+	padding-top: 11px;
+}
+#tx01 {
+	height: 157px;
+	width: 158px;
+	background-image: url(../images/u131.png);
+	background-repeat: no-repeat;
+	float: left;
+}
+#wzms {
+	height: 157px;
+	width: 278px;
+	float: right;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color: #333;
+}
+#content #tab1 .menudiv #con_one_3 #txgg #wzms span {
+	font-size: 14px;
+	color: #F00;
+}
+#tpsc {
+	background-image: url(../images/u133.png);
+	height: 33px;
+	width: 81px;
+	margin-top: 40px;
+	background-repeat: no-repeat;
+	margin-left: 10px;
+}
+
+
+#txgg {
+	height: 160px;
+	width: 500px;
+	margin-top: 20px;
+	margin-left: 100px;
+}
+
+
+
+
+
+
+.tabl_menudiv div{padding:15px;line-height:28px;}#content {
+	width: 100%;
+}

@@ -1,0 +1,66 @@
+.panel-header .panel-title {
+  color: #000;
+  background: none;
+}
+
+.panel-body td {
+  border: none;
+}
+
+.panel-body .datagrid-view1 .datagrid-header-row {
+  background: #31bc86;
+}
+
+.panel-body .datagrid-view1 .datagrid-td-rownumber {
+  background: #2ea879;
+}
+
+.panel-body .datagrid-view1 .datagrid-cell-rownumber {
+  color: #ffffff;
+}
+
+.panel-body .datagrid-view1 .datagrid-body {
+  margin-top: -1px !important;
+}
+
+.panel-body .datagrid-view2 td {
+  padding: 0.75em 1.5em;
+}
+
+.panel-body .datagrid-view2 .datagrid-header-inner {
+  background-color: #ddd;
+}
+
+.panel-body .datagrid-view2 .datagrid-header-inner table.datagrid-htable tr.datagrid-header-row td span {
+  color: #000000;
+  font-size: small;
+  font-weight:bold;
+}
+
+.panel-body .datagrid-view2 .datagrid-header-inner table.datagrid-htable td.datagrid-header-over {
+  background: #ddd;
+}
+
+.panel-body .datagrid-view2 table.datagrid-btable {
+  width: 100%;
+}
+
+.panel-body .datagrid-view2 table.datagrid-btable tr:nth-child(2n-1) {
+  background-color: #f5f5f5;
+  transition: all 0.125s ease-in-out;
+}
+
+.panel-body .datagrid-view2 table.datagrid-btable tr:nth-child(2n-1) {
+  background-color: #f5f5f5;
+  transition: all 0.125s ease-in-out;
+}
+
+.panel-body .datagrid-view2 table.datagrid-btable tr:hover {
+  background-color: rgba(129, 208, 177, 0.3);
+}
+#queryContent .panel-body{
+  padding: 0px;
+}
+#queryContent .panel.datagrid{
+  margin: 0 auto;
+}
